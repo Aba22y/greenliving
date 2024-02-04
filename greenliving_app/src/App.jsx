@@ -2,7 +2,6 @@ import React from 'react'
 import styles from './style'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
-import plant from './assets/plant.png'
 import Footer from './components/Footer'
 
 const App = () => {
