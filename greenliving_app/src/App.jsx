@@ -1,8 +1,11 @@
 import React from 'react'
 import styles from './style'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
+import SignUp from './components/SignUp';
+import Login from './components/Login';
 
 const App = () => {
   return (
@@ -13,7 +16,13 @@ const App = () => {
         </div>
       </div>
       <div className="relative isolate px-6 pt-14 pb-5 lg:px-8">
-        <Hero/>
+        <BrowserRouter>
+          <Routes>
+              <Route path="/" element={<Hero />}/>
+              <Route path="/create-account" element={<SignUp />}/>
+              <Route path="/login" element={<Login />}/>
+          </Routes>
+        </BrowserRouter>
       </div>
       <hr className="rounded-full border-secondaryLight"></hr>
       <Footer/>
